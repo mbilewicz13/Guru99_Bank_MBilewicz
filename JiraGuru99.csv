@@ -1,0 +1,430 @@
+Summary,Issue key,Issue id,Issue Type,Status,Project key,Project name,Project type,Project lead,Project lead id,Project description,Priority,Resolution,Assignee,Assignee Id,Reporter,Reporter Id,Creator,Creator Id,Created,Updated,Last Viewed,Resolved,Due date,Votes,Labels,Description,Environment,Watchers,Watchers Id,Original estimate,Remaining Estimate,Time Spent,Work Ratio,Σ Original Estimate,Σ Remaining Estimate,Σ Time Spent,Security Level,Attachment,Custom field (Actual end),Custom field (Actual start),Custom field (Category),Custom field (Change reason),Custom field (Change risk),Custom field (Change type),Custom field (Compass),Custom field (Development),Custom field (Epic Color),Custom field (Epic Name),Custom field (Epic Status),Custom field (Impact),Custom field (Issue color),Custom field (Locked forms),Custom field (Open forms),Custom field (Rank),Custom field (Request Type),Custom field (Start date),Custom field (Story Points),Custom field (Story point estimate),Custom field (Submitted forms),Custom field (Target end),Custom field (Target start),Custom field (Team),Custom field (Total forms),Custom field ([CHART] Date of First Response),Status Category
+"[Edit Customer] Pojawienie sie błedu ""No Changes made to Customer records"" . Edycja zmiany numeru telefonu.",NNHI-11,10263,Bug,To Do,NNHI,ObronaProjektuMateuszBilewicz13,software,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,Medium,,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,25/Feb/23 12:36 AM,25/Feb/23 12:44 AM,05/Mar/23 9:04 PM,,,0,ManagerZarządzanieKlientem,"h3. *Warunki wstępne:*
+
+Adres strony: [https://demo.guru99.com/v4/manager/EditCustomer.php|https://demo.guru99.com/v4/manager/EditCustomer.php]
+Manager musi być zalogowany.
+
+*Dane:*
+ID Klienta : 12177
+
+h3. *Opis:*
+
+Zmiana nowego muneru telefonu może zawierac jedna liczbe.
+
+h3. *Kroki do reprodukcji:*
+
+1.Wejdz w zakładkę ""Edit Customer"".
+2.Wpisz ID Klienta w pole ""Customer ID""
+3.Nacisnij ""Submit"".
+4.Zmien numer telefonu na jedna liczbe : “1”.
+5.Nacisnij <Submit> by zapisać dane.
+
+h3. *Rezultat oczekiwany:*
+
+Powinien zostac wyświetlony komunikat o nie poprawnej ilości luczb w numerze telefonu. Zmiana  mimo to zostaje zapisana.
+
+ 
+
+h3. *Rezultat otrzymany:*
+
+Manager zostaje przeniesiony na strone z błedem : ""No Changes made to Customer records"" ale po ponownym wejsciu na Edycje Klienta zmiany sa widocznei zaakceptowane z numerem z jedna liczbą.
+
+
+
+h3. *Środowisko:*
+
+Wersja strony 1.3
+Windows 10 Home
+Google Chrome  Wersja 110 (64-bit)
+
+
+
+!NumerTelefonu.png|width=1175,height=719!",,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,,,,,,,,25/Feb/23 12:44 AM;635ada18f7ad721e784e3eb9;NumerTelefonu.png;https://mbilewicz13.atlassian.net/secure/attachment/10011/NumerTelefonu.png,,,,,,,,,,,,,,,,0|i001mv:,,,,,,,,,,,To Do
+[Customized Statement] Pusta strona po akcji naciśnieciu <submit> .,NNHI-10,10262,Bug,To Do,NNHI,ObronaProjektuMateuszBilewicz13,software,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,High,,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,23/Feb/23 10:40 PM,23/Feb/23 10:56 PM,24/Feb/23 9:05 AM,,,0,KlientaZarządzanieKontem,"h3. *Warunki wstępne:*
+
+Adres strony: [https://demo.guru99.com/v4/customer/CustomisedStatementInput.php|https://demo.guru99.com/v4/customer/CustomisedStatementInput.php]
+Klient musi być zalogowany.
+Wprowadzony numer rachunku powinien istnieć w bazie danych.
+
+*Dane:*
+Numer konta bieżacy ""Savings"" : 118834
+Numer konta oszczędnościowego ""Current"" : 118835
+
+h3. *Opis:*
+
+Przy wpisaniu danych w zakładce ""Customized Statement"" i akceptacji pojawia sie pusta strona.
+
+h3. *Kroki do reprodukcji:*
+
+1.Wejdz w zakładke ""Customized Statement""
+2.Wpisz w pole  ""Account no"" numer konta.
+3.Wybierz date w jakim chcesz sprawdzis status.
+4.Wpisz wartość jaka chcesz sprawdzić w polu ""Minimum Transaction Value""
+5.Wpisz numer transakcji w polu ""Number of Transaction"".
+6.Nacisnij <Submit>.
+
+h3. *Rezultat oczekiwany:*
+
+Klient  zostaje przeniesiony na strone zzestawieniem konta.
+
+h3. *Rezultat otrzymany:*
+
+Pojawia sie pusta strona.
+
+ 
+
+h3. *Środowisko:*
+
+Wersja strony 1.3
+Windows 10 Home
+Google Chrome Wersja 110 (64-bit)
+
+
+
+!PustaStronaCustomizedStattments.png|width=1274,height=701!",,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,,,,,,,,23/Feb/23 10:43 PM;635ada18f7ad721e784e3eb9;PustaStronaCustomizedStattments.png;https://mbilewicz13.atlassian.net/secure/attachment/10010/PustaStronaCustomizedStattments.png,,,,,,,,,,,,,,,,0|i001mn:,,,,,,,,,,,To Do
+[Mini Statement] Pusta strona po akcji naciśnieciu <submit> .,NNHI-9,10261,Bug,To Do,NNHI,ObronaProjektuMateuszBilewicz13,software,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,High,,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,23/Feb/23 10:32 PM,23/Feb/23 10:56 PM,23/Feb/23 10:56 PM,,,0,KlientaZarządzanieKontem,"h3. *Warunki wstępne:*
+
+Adres strony: [https://demo.guru99.com/v4/customer/MiniStatementInput.php|https://demo.guru99.com/v4/customer/MiniStatementInput.php]
+Klient musi być zalogowany.
+Wprowadzony numer rachunku powinien istnieć w bazie danych.
+
+*Dane:*
+Numer konta bieżacy ""Savings"" : 118834
+Numer konta oszczędnościowego ""Current"" : 118835
+
+h3. *Opis:*
+
+Sprawdzenie przez Klienta mini wyciągu z konta.
+
+h3. *Kroki do reprodukcji:*
+
+1.Wejdz w zakładke "" Mini Statement"".
+2.Wpisz numer konta jakie chcesz sprawdzić w polu ""Account No"".
+3.Nacisnij <submit>.
+
+h3. *Rezultat oczekiwany:*
+
+Klienta powinien zobaczyć  okno mini wyciagu konta.
+
+h3. *Rezultat otrzymany:*
+
+Pojawia sie pusta strona.
+
+ 
+
+h3. *Środowisko:*
+
+Wersja strony 1.3
+Windows 10 Home
+Google Chrome Wersja 110 (64-bit)
+
+
+
+!PustaStr.png|width=1151,height=668!",,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,,,,,,,,23/Feb/23 10:39 PM;635ada18f7ad721e784e3eb9;PustaStr.png;https://mbilewicz13.atlassian.net/secure/attachment/10009/PustaStr.png,,,,,,,,,,,,,,,,0|i001mf:,,,,,,,,,,,To Do
+"[Balance Enquiry] Po sprawdzeniu stanu konta ""Saving"" i ""Current"" pojawia sie bład ""Error 500"". ",NNHI-8,10260,Bug,To Do,NNHI,ObronaProjektuMateuszBilewicz13,software,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,High,,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,23/Feb/23 10:29 PM,23/Feb/23 10:36 PM,27/Feb/23 9:12 PM,,,0,KlientaZarządzanieKontem,"h3. *Warunki wstępne:*
+
+Adres strony: [https://demo.guru99.com/v4/customer/BalEnqInput.php|https://demo.guru99.com/v4/customer/BalEnqInput.php]
+Klient musi miec założone konto Kienta i Konto bankowe.
+
+*Dane:*
+Numer konta bieżacy ""Savings"" : 118834
+Numer konta oszczędnościowego ""Current"" : 118835
+
+h3. *Opis:*
+
+Sprawdzenie przez Klienta  stanu konta.
+
+h3. *Kroki do reprodukcji:*
+
+1.Wejdz w zakładke ""Balance Enquiry"".
+2.Wybierz konto ktore chcesz sprawdzić.
+3.Wcisnij <submit>.
+
+h3. *Rezultat oczekiwany:*
+
+Klienta powinien zobaczyć stan swojego konta.
+
+h3. *Rezultat otrzymany:*
+
+Przenosi Klienta na strone z blędem “Error 500”.
+
+ 
+
+h3. *Środowisko:*
+
+Wersja strony 1.3
+Windows 10 Home
+Google Chrome Wersja 110 (64-bit)
+
+
+
+!BlanceCustomer.png|width=1166,height=704!",,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,,,,,,,,23/Feb/23 10:32 PM;635ada18f7ad721e784e3eb9;BlanceCustomer.png;https://mbilewicz13.atlassian.net/secure/attachment/10008/BlanceCustomer.png,,,,,,,,,,,,,,,,0|i001m7:,,,,,,,,,,,To Do
+"[Delete Account] Błąd ""Error 500"" po wkliknięciu ""OK""",NNHI-7,10259,Bug,To Do,NNHI,ObronaProjektuMateuszBilewicz13,software,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,High,,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,23/Feb/23 10:23 PM,23/Feb/23 10:53 PM,24/Feb/23 11:34 PM,,,0,ManagerZarządzanieKlientem,"h3. *Warunki wstępne:*
+
+Adres strony: [https://demo.guru99.com/v4/manager/deleteAccountInput.php|https://demo.guru99.com/v4/manager/deleteAccountInput.php]
+Manager może dodać i usunąć konto dla klienta.
+
+*Dane:*
+Numer konta bieżacy ""Savings"" : 118834
+Numer konta oszczędnościowego ""Current"" : 118835
+
+h3. *Opis:*
+
+Usunięcie konta bankowego z Konta Klienta.
+
+h3. *Kroki do reprodukcji:*
+
+1.Wejdz w zakładke ""Delete Account"".
+2.Wpisz numer konta który chcesz usunąć.
+3.Nacisnij <Submit>.
+4.Zostajesz przekierowany do zapytania : ""Do you really want to delete this Account?""  ""OK"" lub ""Cancel"".
+5.Wcisnij ""OK"".
+
+h3. *Rezultat oczekiwany:*
+
+Powinno usunąć konta bankowe.
+
+h3. *Rezultat otrzymany:*
+
+Po wybraniu ""OK"" przekierewuje Ciebie na strone z błedem “Error 500”.
+
+ 
+
+h3. *Środowisko:*
+
+Wersja strony 1.3
+Windows 10 Home
+Google Chrome Wersja 110 (64-bit)
+
+
+
+!DeletAcc.png|width=1188,height=650!",,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,,,,,,,,23/Feb/23 10:26 PM;635ada18f7ad721e784e3eb9;DeletAcc.png;https://mbilewicz13.atlassian.net/secure/attachment/10007/DeletAcc.png,,,,,,,,,,,,,,,,0|i001lz:,,,,,,,,,,,To Do
+[Customized Statement] Zestawienie indywidualne i wyświetlenie transkacji . Pojawia się bład pusta strona.,NNHI-6,10258,Bug,To Do,NNHI,ObronaProjektuMateuszBilewicz13,software,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,High,,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,23/Feb/23 10:18 PM,23/Feb/23 10:35 PM,23/Feb/23 11:24 PM,,,0,ManagerZarządzanieKlientem,"h3. *Warunki wstępne:*
+
+Adres strony : [https://demo.guru99.com/v4/manager/CustomisedStatementInput.php|https://demo.guru99.com/v4/manager/CustomisedStatementInput.php]
+
+
+*Dane:*
+Numer konta bieżacy ""Savings"" : 118834
+Numer konta oszczędnościowego ""Current"" : 118835
+
+h3. *Opis:*
+
+Sprawdzenie zestawienia indywidualnego i wyświetlenie  transakcji.
+
+h3. *Kroki do reprodukcji:*
+
+1.Wejdz w zakładke ""Customized Statement""
+2.Wpisz w pole  ""Account no"" numer konta.
+3.Wybierz date w jakim chcesz sprawdzis status.
+4.Wpisz wartość jaka chcesz sprawdzić w polu ""Minimum Transaction Value""
+5.Wpisz numer transakcji w polu ""Number of Transaction"".
+6.Nacisnij <Submit>.
+
+h3. *Rezultat oczekiwany:*
+
+Powinno przenieść Managera w okno zestawienia transakcji.
+
+h3. *Rezultat otrzymany:*
+
+Przenosi Managera na pusta strone.
+
+ 
+
+h3. *Środowisko:*
+
+Wersja strony 1.3
+Windows 10 Home
+Google Chrome Wersja 110 (64-bit)
+
+!PustaStronaCustomizedStattments.png|width=1274,height=701!",,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,,,,,,,,23/Feb/23 10:22 PM;635ada18f7ad721e784e3eb9;PustaStronaCustomizedStattments.png;https://mbilewicz13.atlassian.net/secure/attachment/10006/PustaStronaCustomizedStattments.png,,,,,,,,,,,,,,,,0|i001lr:,,,,,,,,,,,To Do
+[Mini Statement] Pusta strona po akcji naciśnieciu <submit> .,NNHI-5,10257,Bug,To Do,NNHI,ObronaProjektuMateuszBilewicz13,software,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,High,,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,23/Feb/23 10:08 PM,23/Feb/23 10:56 PM,23/Feb/23 10:55 PM,,,0,ManagerZarządzanieKlientem,"h3. *Warunki wstępne:*
+
+Adres strony; [https://demo.guru99.com/v4/manager/MiniStatementInput.php|https://demo.guru99.com/v4/manager/MiniStatementInput.php]
+Manager musi być zalogowany.
+Wprowadzony numer rachunku powinien istnieć w bazie danych.
+
+*Dane:*
+Numer konta bieżacy ""Savings"" : 118834
+Numer konta oszczędnościowego ""Current"" : 118835
+
+h3. *Opis:*
+
+Sprawdzenie przez Manager mini wyciągu operacji konta Klienta.
+
+h3. *Kroki do reprodukcji:*
+
+1.Wejdź w zakładke ""Mini Statement""
+2.Wpisz jeden z dwóch wybranych numerów konta.
+3.Nacisnij <Submit>.
+
+h3. *Rezultat oczekiwany:*
+
+Powinno przenieść Managera w okno mini wyciagu.
+
+h3. *Rezultat otrzymany:*
+
+Przenosi Managera na pusta strone.
+
+ 
+
+h3. *Środowisko:*
+
+Wersja strony 1.3
+Windows 10 Home
+Google Chrome  Wersja 110 (64-bit)
+
+ 
+
+!MiNiStamtment.png|width=1134,height=698!",,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,,,,,,,,23/Feb/23 10:11 PM;635ada18f7ad721e784e3eb9;MiNiStamtment.png;https://mbilewicz13.atlassian.net/secure/attachment/10005/MiNiStamtment.png,,,,,,,,,,,,,,,,0|i001lj:,,,,,,,,,,,To Do
+"[Balance Enquiry] Błąd ""Error 500"" po akcji wciśnieciu <submit>. ",NNHI-4,10256,Bug,To Do,NNHI,ObronaProjektuMateuszBilewicz13,software,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,High,,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,23/Feb/23 9:26 PM,23/Feb/23 10:55 PM,27/Feb/23 9:12 PM,,,0,ManagerZarządzanieKlientem,"h3. *Warunki wstępne:*
+
+Adres strony: [https://demo.guru99.com/v4/manager/BalEnqInput.php|https://demo.guru99.com/v4/manager/BalEnqInput.php]
+Manager musi być zalogowany.
+
+*Dane:*
+Numer konta bieżacy ""Savings"" : 118834
+Numer konta oszczędnościowego ""Current"" : 118835
+
+h3. *Opis:*
+
+Sprawdzenie przez Manager stanu konta Klienta
+
+h3. *Kroki do reprodukcji:*
+
+1.Wejdź w zakładke ""Balance Enquiry""
+2.Wpisz jeden z dwóch wybranych numerów konta.
+3.Nacisnij <Submit>.
+
+h3. *Rezultat oczekiwany:*
+
+Powinno przenieść Managera w okno stanu konta.
+
+h3. *Rezultat otrzymany:*
+
+Przenosi nas na strone z blędem. Error 500.
+
+ 
+
+h3. *Środowisko:*
+
+Wersja strony 1.3
+Windows 10 Home
+Google Chrome  Wersja 110 (64-bit)
+
+!SprawdzenieStanuKonta.png|width=954,height=407!",,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,,,,,,,,23/Feb/23 9:46 PM;635ada18f7ad721e784e3eb9;SprawdzenieStanuKonta.png;https://mbilewicz13.atlassian.net/secure/attachment/10004/SprawdzenieStanuKonta.png,,,,,,,,,,,,,,,,0|i001lb:,,,,,,,,,,,To Do
+"[Deposit] Błąd ""Error 500"" po akcji wciśnieciu <submit>. ",NNHI-3,10255,Bug,To Do,NNHI,ObronaProjektuMateuszBilewicz13,software,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,High,,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,23/Feb/23 9:07 PM,23/Feb/23 10:55 PM,23/Feb/23 11:24 PM,,,0,ManagerZarządzanieKlientem,"h3. *Warunki wstępne:*
+
+Adres strony; [https://demo.guru99.com/v4/manager/DepositInput.php|https://demo.guru99.com/v4/manager/DepositInput.php]
+Manager musi być zalogowany.
+
+*Dane:*
+Numer konta bieżacy ""Savings"" : 118834
+Numer konta oszczędnościowego ""Current"" : 118835
+
+h3. *Opis:*
+
+Po wpisaniu danych Klienta do zaksiegowania i potwierdzeniu przenosi Managera na strone z błedem.
+
+h3. *Kroki do reprodukcji:*
+
+1.Wejdź w zakładke ""Deposit""
+2.Wpisz numer konta, kwotę i opis.
+3.Wciśnij <Submit>.
+
+h3. *Rezultat oczekiwany:*
+
+Manager powienien zostać przeniesiony do okna z potwierdzenie depozytu 
+
+
+
+h3. *Rezultat otrzymany:*
+
+Przenosi Managera na strone z blędem. Error 500.
+
+ 
+
+h3. *Środowisko:*
+
+Wersja strony 1.3
+Windows 10 Home
+Google Chrome  Wersja 110 (64-bit)
+
+!BładStronyDepozyt.png|width=1199,height=740!",,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,,,,,,,,23/Feb/23 9:25 PM;635ada18f7ad721e784e3eb9;BładStronyDepozyt.png;https://mbilewicz13.atlassian.net/secure/attachment/10003/B%C5%82adStronyDepozyt.png,,,,,,,,,,,,,,,,0|i001l3:,,,,,,,,,,,To Do
+"[Edit Account] Błąd ""Error 500"" po akcji wciśnieciu <submit>. ",NNHI-2,10254,Bug,To Do,NNHI,ObronaProjektuMateuszBilewicz13,software,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,High,,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,23/Feb/23 8:53 PM,24/Feb/23 9:27 AM,02/Mar/23 10:29 AM,,,0,ManagerZarządzanieKlientem,"h3. *Warunki wstępne:*
+
+Adres strony: [https://demo.guru99.com/v4/manager/editAccount.php|https://demo.guru99.com/v4/manager/editAccount.php]
+Manager musi być zalogowany.
+
+h3. *Dane:*
+
+Numer konta bieżacy ""Savings"" : 118834
+Numer konta oszczędnościowego ""Current"" : 118835
+
+h3. *Opis:*
+
+Po wpisaniu w edytorze  numeru Konta Klienta wyskakuje bład “Error 500”.
+
+h3. *Kroki do reprodukcji:*
+
+1.Wejdz w zakładkę ""Edit Account""
+2.Wpisz dany numer konta w pole ""Account No.""
+3.Nasicnij <Submit>.
+
+h3. *Rezultat oczekiwany:*
+
+Manager powinien zostać przeniesiony na strone z edycja konta bankowego Klienta.
+
+h3.  *Rezultat otrzymany:*
+
+Manager zostaje przeniesiony na strone z blędem. Error 500.
+
+h3.  *Środowisko:*
+
+Wersja strony 1.3
+Windows 10 Home
+Google Chrome  Wersja 110 (64-bit)
+
+!Error500.png|width=1025,height=428!",,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,,,,,,,,23/Feb/23 9:00 PM;635ada18f7ad721e784e3eb9;Error500.png;https://mbilewicz13.atlassian.net/secure/attachment/10002/Error500.png,,,,,,,,,,,,,,,,0|i001kv:,,,,,,,,,,,To Do
+"[Edit Customer] Pojawienie sie błedu ""No Changes made to Customer records"". Edycja zmiany miejsca zamieszkania.",NNHI-1,10253,Bug,To Do,NNHI,ObronaProjektuMateuszBilewicz13,software,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,High,,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,23/Feb/23 8:27 AM,25/Feb/23 12:35 AM,05/Mar/23 9:02 PM,,,0,ManagerZarządzanieKlientem,"h3. *Warunki wstępne:*
+
+Adres strony: [https://demo.guru99.com/v4/manager/EditCustomer.php|https://demo.guru99.com/v4/manager/EditCustomer.php]
+Manager musi być zalogowany.
+
+*Dane:*
+ID Klienta : 12177
+
+h3. *Opis:*
+
+Po edycji przez Managera zmiany adresu zamieszkania zostaje przeniesiony na stronę z błedem mimo to że zostały dane zmienione.
+
+h3. *Kroki do reprodukcji:*
+
+1.Wejdz w zakładkę ""Edit Customer"".
+2.Wpisz ID Klienta w pole ""Customer ID""
+3.Nacisnij ""Submit"".
+4.Edytuj adres zamieszkania.
+5.Nacisnij <Submit> by zapisać dane.
+
+h3. *Rezultat oczekiwany:*
+
+Manager powinien zostać przeniesiony na strone o poprawnej edycji konta.
+
+ 
+
+h3. *Rezultat otrzymany:*
+
+Manager zostaje przeniesiony na strone z błedem : ""No Changes made to Customer records"" ale po ponownym wejsciu na Edycje Klienta zmiany sa widoczne.
+
+
+
+h3. *Środowisko:*
+
+Wersja strony 1.3
+Windows 10 Home
+Google Chrome  Wersja 110 (64-bit)
+
+!OknoPrzyZmianieDanych.png|width=1174,height=745!
+
+
+",,Mateusz Bilewicz,635ada18f7ad721e784e3eb9,,,,,,,,,23/Feb/23 8:39 AM;635ada18f7ad721e784e3eb9;OknoPrzyZmianieDanych.png;https://mbilewicz13.atlassian.net/secure/attachment/10001/OknoPrzyZmianieDanych.png,,,,,,,,,,,,,,,,0|i001kn:,,,,,,,,,,,To Do
