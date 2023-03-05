@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S1</id>
+	<name>Master</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>Manager</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C1</id>
+				<title>[Registration] Rejestracja z istniejącym e-mailem.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres e-mail :  lirir62178@aosod.com
+Strona  :  https://demo.guru99.com/v4/index.php
+
+
+Środowisko :                                         
+Windows 10 Home                              
+Google Chrome  Wersja 110 (64-bit) 
+
+
+
+</preconds>
+										<steps>1.Wejdz na strone https://demo.guru99.com/v4/index.php
+2.Spójrz nizej na kroki do założenia konta.                                
+3.Kliknij na słowo &quot;&quot;Visit&quot;&quot; przekieruje na strone z wpisaniem meila.  
+4.Podaj prawidłowy adres email.
+5.Nacisnij przycisk &quot;&quot;Submit&quot;&quot;.&quot;</steps>
+										<expected>Manager zostaje poprawnie zarejestrowany.
+Manager zostaje przeniesiony do strony z numerem ID i hasłem.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C2</id>
+				<title>[Logging in] Poprawne logowanie z istniejącym loginem i hasłem.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres URL: https://demo.guru99.com/v4
+Numer ID: mngr478346
+Hasło: adAvajE
+
+
+Środowisko :                                         
+Windows 10 Home                              
+Google Chrome  Wersja 110 (64-bit) 
+
+
+</preconds>
+										<steps>1.Wejdz na strone https://demo.guru99.com/v4/index.php
+2.Wpisz poprawny numer ID w pole &quot; User ID&quot;.
+3.Wpisz poprawne hasło w pole &quot;Password&quot;
+4.Kliknij &quot;Login&quot;</steps>
+										<expected>Manager został poprawnie zalogowany na swoje konto.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C3</id>
+				<title>[Logging in] Próba niepoprawne logowania z nieistniejacym  loginem i/lub hasłem.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres URL: https://demo.guru99.com/v4
+Numer ID: mmmmm
+Hasło: abc123
+
+Środowisko :                                         
+Windows 10 Home                              
+Google Chrome  Wersja 110 (64-bit)  
+
+</preconds>
+										<steps>1.Wejdz na strone https://demo.guru99.com/v4/.
+2.Wpisz nie poprawny Numer ID w pole &quot;User ID&quot;.
+3.Wpisz nie poprawn hasło w pole &quot;Password&quot;.
+4.Kliknij &quot;Login&quot;</steps>
+										<expected>Użytkownik został przeniesiony na strone z informacją o niepoprawnym wpisaniu login i hasła. &quot;User or Password is not valid&quot;.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C14</id>
+				<title>[Change Password] Zmiana hasła Managera</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony: https://demo.guru99.com/v4/manager/PasswordInput.php
+Stare hasło : adAvajE
+Nowe hasło : abcd123!
+
+
+
+
+
+Środowisko :                                         
+Windows 10 Home                              
+Google Chrome  Wersja 110 (64-bit)
+
+
+
+
+
+</preconds>
+										<steps>1.Wejdz w zakładke &quot;Change password&quot;.
+2.Wpisz stare hasło w &quot;Old Password&quot;.
+3.Nadaj nowe hasło &quot;New Password&quot;.
+4.Potwierdz nowe hasło &quot;Confirm Password&quot;.
+5.Nacisnij &amp;lt;Submit&amp;gt;.</steps>
+										<expected>Pojawia się okno z informacja : &quot;Password id Changed&quot;</expected>
+									</custom>
+							</case>
+								</cases>
+								<sections>
+		<section>
+		<name>[Manager] Zarządzanie Klientem</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C4</id>
+				<title>[New Customer]  Tworzenie nowego klienta z poprawnymi danymi.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>
+
+Manager powinien być zalogowany.
+Strona internetowa : https://demo.guru99.com/v4/manager/addcustomerpage.php
+
+Dane Nowego Klienta:
+Customer Name : Marek Marecki
+Date of Birth : 03/12/1990
+Address : Polna 3
+City : Wroclaw
+State : Polska
+PIN : 131313
+Mobile Number : 555666333 
+E-mail : marek123@mark.pl
+Password : marek12
+
+
+
+
+
+
+
+
+
+
+
+
+
+Środowisko :                                         
+Windows 10 Home                              
+Google Chrome  Wersja 110 (64-bit) 
+
+
+</preconds>
+										<steps>1.Wejdź w zakładkę &quot;New  Customer&quot;
+2.Wpisz w pole &quot;Customer name&quot;  imię klienta
+3.Wybierz płeć&quot;male&quot; or &quot;female&quot;.
+4.Wybierz date urodzenia.
+5.Wpisz adres , miasto , kraj , numer PIN, numer telefonu , e-mail i hasło.
+6.Nacisnij &amp;lt;Submit&amp;gt;.</steps>
+										<expected>Klient został poprawnie zarejetrowany.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C6</id>
+				<title>[New Customer] Tworzenie nowego klienta z nie poprawnymi danymi.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Manager powinien być zalogowany.
+Strona internetowa : https://demo.guru99.com/v4/manager/addcustomerpage.php
+
+
+
+
+
+Środowisko :
+Windows 10 Home
+Google Chrome  Wersja 110 (64-bit)</preconds>
+										<steps>1.Wejdz w zakładkę &quot;New  Customer&quot;
+2.Wypełnij  pola z nie poprawnymi danymi.
+3.Nacisnij &amp;lt;Submit&amp;gt;</steps>
+										<expected>Klient został nie zarejestrowany. Pojawia się błąd rejestracji nowego klienta.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C33</id>
+				<title>[New Customer] Tworzenie nowego klienta z takim samym e-mailem jak inny Klient.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Manager powinien być zalogowany.
+Strona internetowa : https://demo.guru99.com/v4/manager/addcustomerpage.php
+
+Dane Nowego Klienta:
+Customer Name : Andrzej
+Date of Birth : 06/07/2005
+Address : Łakowa 2
+City : Wroclaw
+State : Polska
+PIN : 222222
+Mobile Number : 600601602
+E-mail : marek123@mark.pl
+Password : Andrzej123
+
+
+
+
+
+Środowisko :
+Windows 10 Home
+Google Chrome  Wersja 110 (64-bit)</preconds>
+										<steps>1.Wejdź w zakładkę &quot;New  Customer&quot;
+2.Wpisz w pole &quot;Customer name&quot;  imię klienta
+3.Wybierz płeć.
+4.Wybierz date urodzenia.
+5.Wpisz adres , miasto , kraj , numer PIN, numer telefonu i hasło.
+6.Wpisz w pole &quot;E-mail&quot; taki sam email jak klient poprzedni.
+7.Nacisnij &amp;lt;Submit&amp;gt;.
+
+</steps>
+										<expected>Klient nie został zarejestrowny wystąpił bład: &quot;Email Address Already Exist !!&quot;</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C5</id>
+				<title>[Edit Customer]  Zmiana adresu zamieszkania z użyciem specjalnych znaków.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references>T5</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony: https://demo.guru99.com/v4/manager/EditCustomer.php
+Manager powinien być zalogowany.
+Według specyfikacji w adresie nie moze byc znaków specjalnych.
+ID klienta : 12177.
+Aktualny adres : Polna 3  
+Nowy adres : Kolorowa 10.
+
+
+
+
+
+Środowisko :                                         
+Windows 10 Home                              
+Google Chrome  Wersja 110 (64-bit)
+
+
+
+
+
+
+
+</preconds>
+										<steps>1.Wejdz w zakładkę &quot;Edit Customer&quot;.
+2.Wpisz ID klienta w pole &quot;Customer ID&quot;
+3.Nacisnij &quot;Submit&quot;.
+4.Edytuj adres zamieszkania.
+5.Nacisnij &amp;lt;Submit&amp;gt; by zapisać dane.</steps>
+										<expected>Manager zostaje przeniesiony na strone z błedem : &quot;No Changes made to Customer records&quot; ale po ponownym wejsciu na Edycje Klienta zmiany sa widoczne równiez z użytymi wcześniej znakami specjalnymi.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C30</id>
+				<title>[Edit Customer]  Zamiana numer telefonu posiadający jedna liczbe jest akcpetowany.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony: https://demo.guru99.com/v4/manager/EditCustomer.php
+Manager powinien być zalogowany.
+ID klienta : 12177.
+Numer telefonu : 555666333
+
+
+Środowisko :
+Windows 10 Home
+Google Chrome  Wersja 110 (64-bit)</preconds>
+										<steps>1.Wejdz w zakładkę &quot;Edit Customer&quot;.
+2.Wpisz ID klienta w pole &quot;Customer ID&quot;
+3.Nacisnij &quot;Submit&quot;.
+4.Edytuj numer telefonu wpisując jedna liczbe.
+5.Nacisnij &amp;lt;Submit&amp;gt; by zapisać dane.
+
+</steps>
+										<expected>Manager zostaje przeniesiony na strone z błedem : &quot;No Changes made to Customer records&quot; ale po ponownym wejsciu na Edycje Klienta zmiany zostały zapisane.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C21</id>
+				<title>[Delete Customer] Usuwanie konta klienta z bazy danych banku.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres Strony: https://demo.guru99.com/v4/manager/DeleteCustomerInput.php
+Manager może usunąć klienta.
+Numer konta klienta : 12177
+
+
+
+
+Środowisko :                                         
+Windows 10 Home                              
+Google Chrome  Wersja 110 (64-bit)
+
+
+
+
+</preconds>
+										<steps>1.Wejdz w zakładke &quot;Delete Customer&quot;.
+2.Wpisz ID klienta w polu &quot;Customer ID&quot;
+3.Nacisnij &amp;lt;Submit&amp;gt;.</steps>
+										<expected>Po wpisaniu kieruje Ciebie na strone z komunikatem:
+&quot;Customer could not be deleted!!. First delete all accounts 
+of this customer then delete the customer&quot;.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C7</id>
+				<title>[New account] Tworzenie  konta bankowego typu  &quot;Savings&quot; dla nowego klienta.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony: https://demo.guru99.com/v4/manager/addAccount.php
+Manager powinien mieć ID klienta.
+Klient powinien potwierdzic autoryzacje konta poprzez zalogowanie sie na konto.
+
+
+
+Środowisko :                                         
+Windows 10 Home                              
+Google Chrome  Wersja 110 (64-bit)
+
+
+
+
+
+</preconds>
+										<steps>1.Wejdz w zakładkę &quot;New  Account&quot;.
+2.Wpisz poprawny &quot;Customer ID&quot;.
+3.Wybierz konto &quot;Savings&quot;.
+4.Wpisz wstepny depozyt w &quot;Initial deposit&quot;.
+5.Nacisnij &amp;lt;Submit&amp;gt;.</steps>
+										<expected>Konto dla Klienta zostało stworzone.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C8</id>
+				<title>[New account] Tworzenie konta bankowego typu &quot;Current&quot; dla nowego klienta.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony: https://demo.guru99.com/v4/manager/addAccount.php
+Manager powinien mieć ID klienta.
+Klient powinien potwierdzic autoryzacje konta poprzez zalogowanie sie na konto.
+
+
+
+
+Środowisko :                                         
+Windows 10 Home                              
+Google Chrome  Wersja 110 (64-bit)
+
+
+
+
+</preconds>
+										<steps>1.Wejdz w zakładkę &quot;New  Account&quot;.
+2.Wpisz poprawny &quot;Customer ID&quot;.
+3.Wybierz konto &quot;Current&quot;.
+4.Wpisz wstepny depozyt w &quot;Initial deposit&quot;.
+5.Nacisnij &amp;lt;Submit&amp;gt;.</steps>
+										<expected>Konto dla Klienta zostało stworzone.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C31</id>
+				<title>[New Account]   Depozyt początkowy jest mniejszy niż 500, System wyświetla błąd.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony: https://demo.guru99.com/v4/manager/addAccount.php
+Manager powinien być zalogowany.
+ID Klienta 12177
+
+
+
+Środowisko :
+Windows 10 Home
+Google Chrome  Wersja 110 (64-bit)</preconds>
+										<steps>1. Wejdz w zakładke &quot;New Account&quot;.
+2. Wpisz w pole &quot;Customer id&quot; numer ID klienta.
+3. Wybierz &quot;Account type&quot; z Drop Down - &quot;Saving&quot; lub &quot;Current&quot;
+4. W &quot;Initial deposit&quot; wpisz sume mniejsza niż 500.
+5. Wciśnij &amp;lt;submit&amp;gt;.
+
+
+
+
+
+ 
+</steps>
+										<expected>Pojawia sie okno z komunikatem: &quot;Intial deposite must be Rs. 500 or more&quot;.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C9</id>
+				<title>[Edit Account] Edycja konta klienta.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references>T9</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony; https://demo.guru99.com/v4/manager/editAccount.php
+Numer konta bieżacy &quot;Savings&quot; : 118834
+Numer konta oszczędnościowego &quot;Current&quot; : 118835
+
+Środowisko :                                         
+Windows 10 Home                              
+Google Chrome  Wersja 110 (64-bit)
+
+</preconds>
+										<steps>1.Wejdz w zakładkę &quot;Edit Account&quot;
+2.Wpisz dany numer konta w pole &quot;Account No.&quot;
+3.Nasicnij &amp;lt;Submit&amp;gt;.
+</steps>
+										<expected>Przenosi nas na strone z blędem. Error 500.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C19</id>
+				<title>[Delete Account] Anulowanie  usuwania jednego konta  bankowego z konta klienta .</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony: https://demo.guru99.com/v4/manager/deleteAccountInput.php
+Manager może dodać i usunąć konto dla klienta.
+Numer konta bieżacy &quot;Savings&quot; : 118834
+Numer konta oszczędnościowego &quot;Current&quot; : 118835
+
+
+Środowisko :                                         
+Windows 10 Home                              
+Google Chrome  Wersja 110 (64-bit)
+
+
+
+</preconds>
+										<steps>1.Wejdz w zakładke &quot;Delete Account&quot;.
+2.Wpisz numer konta który chcesz usunąć.
+3.Nacisnij &amp;lt;Submit&amp;gt;.
+4.Zostajesz przekierowany do zapytania : &quot;Do you really want to delete this Account?&quot;  &quot;OK&quot; lub &quot;Cancel&quot;.  
+5.Wcisnij &quot;cancel&quot;
+</steps>
+										<expected>Po wybraniu &quot;cancel&quot; przekierewuje Ciebie na strone bierzacą.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C20</id>
+				<title>[Delete Account] Potwierdzenie usunięcia jednego konta bankowego z konta klienta .</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references>T20</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony: https://demo.guru99.com/v4/manager/deleteAccountInput.php
+Manager może dodać i usunąć konto dla klienta.
+Numer konta bieżacy &quot;Savings&quot; : 118834
+Numer konta oszczędnościowego &quot;Current&quot; : 118835
+
+
+Środowisko :                                         
+Windows 10 Home                              
+Google Chrome  Wersja 110 (64-bit)
+
+
+</preconds>
+										<steps>1.Wejdz w zakładke &quot;Delete Account&quot;.
+2.Wpisz numer konta który chcesz usunąć.
+3.Nacisnij &amp;lt;Submit&amp;gt;.
+4.Zostajesz przekierowany do zapytania : &quot;Do you really want to delete this Account?&quot;  &quot;OK&quot; lub &quot;Cancel&quot;.  
+5.Wcisnij &quot;OK&quot;.</steps>
+										<expected>Po wybraniu &quot;OK&quot; przekierewuje Ciebie na strone z błedem.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C10</id>
+				<title>[Deposit]  Depozyt funduszy na dane konto.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references>T10</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony; https://demo.guru99.com/v4/manager/DepositInput.php
+Numer konta bieżacy &quot;Savings&quot; : 118834
+Numer konta oszczędnościowego &quot;Current&quot; : 118835
+
+
+Środowisko :                                         
+Windows 10 Home                              
+Google Chrome  Wersja 110 (64-bit)
+
+
+</preconds>
+										<steps>1.Wejdź w zakładke &quot;Deposit&quot;
+2.Wpisz numer konta, kwotę i opis.
+3.Wciśnij &amp;lt;Submit&amp;gt;.
+</steps>
+										<expected>Przenosi nas na strone z blędem. Error 500.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C29</id>
+				<title>[Withdrawal]  Wypłata danej kwoty.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony: https://demo.guru99.com/v4/manager/WithdrawalInput.php
+Numer konta bieżacy &quot;Savings&quot; : 118834
+Numer konta oszczędnościowego &quot;Current&quot; : 118835
+
+Środowisko :
+Windows 10 Home
+Google Chrome  Wersja 110 (64-bit)
+
+</preconds>
+										<steps>1.Wejdz w zakładke  &quot;Withdrawal&quot;.
+2.Wpisz numer konta ilóść pieniędzy i opis.
+3.Wciśnij &amp;lt;submit&amp;gt;.</steps>
+										<expected>Manager zostaje przeniesiony za strone z komunikatem : &quot;You are not authorize to debit money from this account!!&quot;.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C32</id>
+				<title>[Withdrawal] Wypłata wiekszej kwoty niż posiadanie wymaganego salda.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony: https://demo.guru99.com/v4/manager/WithdrawalInput.php
+Numer konta bieżacy &quot;Savings&quot; : 118834
+Numer konta oszczędnościowego &quot;Current&quot; : 118835
+
+Środowisko :
+Windows 10 Home
+Google Chrome  Wersja 110 (64-bit)</preconds>
+										<steps>1.Wejdz w zakładke  &quot;Withdrawal&quot;.
+2.Wpisz numer konta w pole &quot;Account no&quot;
+3.Wpisz w pole Amount&quot;  ilość wieksza niz stan konta np. 1000000
+4.Wpisz w pole &quot;Description&quot; nazwe przelewu.
+5.Wciśnij &amp;lt;submit&amp;gt;.</steps>
+										<expected>Przenosi do okna z informacja o nieudanej tranzakcji.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C11</id>
+				<title>[Fund transfer]  Przeniesienie funduszu na drugie konto.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony: https://demo.guru99.com/v4/manager/FundTransInput.php 
+Numer konta bieżacy &quot;Savings&quot; : 118834
+Numer konta oszczędnościowego &quot;Current&quot; : 118835
+
+
+Środowisko :                                         
+Windows 10 Home                              
+Google Chrome  Wersja 110 (64-bit)
+
+
+</preconds>
+										<steps>1.Wejdz  w zakładke &quot;Fund transfer&quot;
+2.Wpisz Numery konta do &quot;Payers &quot; i &quot;Payees &quot;
+3.Wpisz ilość oraz opis przelewu.
+4.Naciśnij &amp;lt;Submit&amp;gt;</steps>
+										<expected>Pojawia się okno z informacja o wykonanym ptransferze.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C12</id>
+				<title>[Fund transfer]  Przeniesienie funduszu na  nie istniejące konto.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony: https://demo.guru99.com/v4/manager/FundTransInput.php 
+Nie istniejacy numer konta : 22222
+Numer konta bieżacy &quot;Savings&quot; : 118834
+
+
+
+Środowisko :                                         
+Windows 10 Home                              
+Google Chrome  Wersja 110 (64-bit)
+
+
+
+</preconds>
+										<steps>1.Wejdz  w zakładke &quot;Fund transfer&quot;
+2.Wpisz numer konta &quot;Savings&quot; w pole  &quot;Payers&quot; .
+3.Wpisz nie istaniejący numer konta w pole &quot;Payees&quot;.
+4.Wpisz ilość oraz opis przelewu.
+5.Naciśnij &amp;lt;Submit&amp;gt;</steps>
+										<expected>Pojawia sie okno z informacja : &quot;Account 22222does not exist!!!.
+Jeśli te numery konta docelowego są nieprawidłowe, system wyświetla błąd.
+</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C13</id>
+				<title>[Fund transfer] Przeniesienie funduszy na te same konto.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony: https://demo.guru99.com/v4/manager/FundTransInput.php 
+Numer konta bieżacy &quot;Savings&quot; : 118834
+
+
+
+Środowisko :                                         
+Windows 10 Home                              
+Google Chrome  Wersja 110 (64-bit)
+
+
+
+
+</preconds>
+										<steps>1.Wejdz  w zakładke &quot;Fund transfer&quot;
+2.Wpisz taki sam numer konta  w polu &quot;Payers &quot; i &quot;Payees &quot;
+3.Wpisz ilość oraz opis przelewu.
+Naciśnij &amp;lt;Submit&amp;gt;</steps>
+										<expected>Pojawia sie okno z informacja ze te same konto nie moze sie  powtarzac w &quot;Payers &quot; i &quot;Payees &quot;.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C15</id>
+				<title>[Balance Enquiry] Sprawdzenie stanu konta klienta.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references>T15</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony: https://demo.guru99.com/v4/manager/BalEnqInput.php
+Manager moze przeglądać stan konta klienta.
+Wprowadzony numer rachunku powinien istnieć w bazie danych.
+
+Dane:
+Numer konta bieżacy &quot;Savings&quot; : 118834
+Numer konta oszczędnościowego &quot;Current&quot; : 118835
+
+
+Środowisko :
+Wersja strony 1.3
+Windows 10 Home                              
+Google Chrome  Wersja 110 (64-bit)
+
+
+
+ 
+</preconds>
+										<steps>1.Wejdź w zakładke &quot;Balance Enquiry&quot;
+2.Wpisz jeden z dwóch wybranych numerów konta.
+3.Nacisnij &amp;lt;Submit&amp;gt;.</steps>
+										<expected>Przenosi nas na strone z blędem. Error 500.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C16</id>
+				<title>[Mini Statement]   Sprawdzenie mini wyciągu operacji konta .</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references>T16</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony; https://demo.guru99.com/v4/manager/MiniStatementInput.php
+Manager moze przeglądać stan konta klienta.
+Wprowadzony numer rachunku powinien istnieć w bazie danych.
+
+Dane:
+Numer konta bieżacy &quot;Savings&quot; : 118834
+Numer konta oszczędnościowego &quot;Current&quot; : 118835
+
+
+Środowisko :                                         
+Windows 10 Home                              
+Google Chrome  Wersja 110 (64-bit)
+
+
+</preconds>
+										<steps>1.Wejdź w zakładke &quot;Mini Statement&quot;
+2.Wpisz jeden z dwóch wybranych numerów konta.
+3.Nacisnij &amp;lt;Submit&amp;gt;.</steps>
+										<expected>Zostajesz przenisiony na pusta strone.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C17</id>
+				<title>[Mini Statment]  Sprawdzenie mini wyciagu operacji konta z nie poprawnym numerem konta.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony; https://demo.guru99.com/v4/manager/MiniStatementInput.php
+Manager moze przeglądać stan konta klienta.
+Wprowadzony numer rachunku powinien istnieć w bazie danych.
+
+
+Środowisko :                                         
+Windows 10 Home                              
+Google Chrome  Wersja 110 (64-bit)
+
+
+
+
+</preconds>
+										<steps>1.Wejdź w zakładke &quot;Mini Statement&quot;
+2.Wpisz nie poprawnie numer konta.
+3.Nacisnij &amp;lt;Submit&amp;gt;.</steps>
+										<expected>Przenosi nas na strone z błedem &quot;Account does not exist&quot;. </expected>
+									</custom>
+							</case>
+															<case>
+				<id>C18</id>
+				<title>[Customized Statement]  Zestawienie indywidualne i wyświetlenie transkacji na rachunku opacriu o date , wartość transakcji.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references>T18</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony : https://demo.guru99.com/v4/manager/CustomisedStatementInput.php
+Numer konta oszczędnościowego &quot;Current&quot; : 118835
+
+
+Środowisko :                                         
+Windows 10 Home                              
+Google Chrome  Wersja 110 (64-bit)
+
+
+</preconds>
+										<steps>1.Wejdz w zakładke &quot;Customized Statement&quot;
+2.Wpisz w pole  &quot;Account no&quot; numer konta.
+3.Wybierz date w jakim chcesz sprawdzis status. 
+4.Wpisz wartość jaka chcesz sprawdzić w polu &quot;Minimum Transaction Value&quot; 
+5.Wpisz numer transakcji w polu &quot;Number of Transaction&quot;.
+6.Nacisnij &amp;lt;Submit&amp;gt;.</steps>
+										<expected>Zostajesz przeniesiony na pustą strone.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C22</id>
+				<title>[Log out] Poprawne wylogowanie sie Managera z konta.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony: https://demo.guru99.com/v4/manager/Managerhomepage.php
+Manager powinien być zalogowany.
+
+
+Środowisko :                                         
+Windows 10 Home                              
+Google Chrome  Wersja 110 (64-bit)
+
+
+</preconds>
+										<steps>Wcisnij w zakładce pole &quot; Log out &quot;</steps>
+										<expected>Wyswietla sie komunikat :&quot;You Have Succesfully Logged Out!!&quot;</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>[Custumer] Zarządzanie Kontem</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C23</id>
+				<title>[Balance Enquiry] Sprawdzenie stanu konta &quot;Saving&quot; i &quot;Current&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references>T23</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony: https://demo.guru99.com/v4/customer/BalEnqInput.php
+Klient musi miec założone konto Kienta i Konto bankowe.
+Numer konta bieżacy &quot;Savings&quot; : 118834
+Numer konta oszczędnościowego &quot;Current&quot; : 118835
+
+
+Środowisko :
+Wersja strony 1.3
+Windows 10 Home
+Google Chrome  Wersja 110 (64-bit) 
+
+
+
+</preconds>
+										<steps>1.Wejdz w zakładke &quot;Balance Enquiry&quot;.
+2.Wybierz &quot;Account type&quot; z Drop Down - &quot;Saving&quot; lub &quot;Current&quot;
+3.Wcisnij &amp;lt;submit&amp;gt;.</steps>
+										<expected>Przenosi nas na strone z blędem. Error 500.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C24</id>
+				<title>[Fund Transfer]  Przelew na inne konto.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony: https://demo.guru99.com/v4/customer/customerfundinput.php
+Klient musi miec założone konto Kienta i Konto bankowe.
+Payers account no : 118834
+Payees account no: 118835
+
+
+Środowisko :
+Windows 10 Home
+Google Chrome  Wersja 110 (64-bit)
+
+</preconds>
+										<steps>1.Wejdz w zakładke &quot;Fund Transfer&quot;.
+2.Wpisz w pole &quot;Payers account no&quot; i &quot;Payees account no&quot; numery kont.
+3.Wpisz w pole &quot;Amount&quot; ilość i w &quot;Description&quot; tytuł przelewu.
+4.Nacisnij &amp;lt;submit&amp;gt;. </steps>
+										<expected>Przenosi nas na strone ze szczegółami  prawidłowej tranzakcji.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C25</id>
+				<title>[Change Password] Zmiana hasła na nowe.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony: https://demo.guru99.com/v4/customer/PasswordInput.php
+
+Strae hasło: marek123
+Nowe hasło: Marek123!
+
+
+
+
+
+
+
+
+Środowisko :
+Windows 10 Home
+Google Chrome  Wersja 110 (64-bit)</preconds>
+										<steps>1.Wejdz w zakładke &quot;Changepassword&quot;.
+2.Wpisz stare hasło w polu &quot;Old Password&quot;.
+3.Wpisz nowe hasło w polu &quot;New Password&quot; i potwierdz nowe hasło w polu &quot;Confirm Password&quot;.
+4.Wciśnij &amp;lt;submit&amp;gt;.
+5.Pojawia sie okno z komunikatem &quot;Password is Changed&quot; i kieruje do okna ponownego zalogowania sie.
+6.Zaloguj się ponownie.
+
+
+ </steps>
+										<expected>Zmiana hasła poszła pozytywnie. Po ponownym zalogowaniu sie z nowym hasłem Klient jest na swoim koncie. </expected>
+									</custom>
+							</case>
+															<case>
+				<id>C26</id>
+				<title>[Mini Statement]  Sprawdzenie mini wyciągu operacji konta .</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references>T26</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony: https://demo.guru99.com/v4/customer/MiniStatementInput.php
+Numer konta bieżacy &quot;Savings&quot; : 118834
+Numer konta oszczędnościowego &quot;Current&quot; : 118835
+
+
+
+
+Środowisko :
+Windows 10 Home
+Google Chrome  Wersja 110 (64-bit)</preconds>
+										<steps>1.Wejdz w zakładke &quot; Mini Statement&quot;.
+2.Wpisz numer konta jakie chcesz sprawdzić w polu &quot;Account No&quot;.
+3.Nacisnij &amp;lt;submit&amp;gt;.</steps>
+										<expected>Pojawia sie pusta strona.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C27</id>
+				<title>[Customized Statement]  Zestawienie indywidualne i wyświetlenie transkacji na rachunku opacriu o date , wartość transakcji.</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references>T27</references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony: https://demo.guru99.com/v4/customer/CustomisedStatementInput.php
+Numer konta bieżacy &quot;Savings&quot; : 118834
+Numer konta oszczędnościowego &quot;Current&quot; : 118835
+
+Środowisko :
+Windows 10 Home
+Google Chrome  Wersja 110 (64-bit)</preconds>
+										<steps>1.Wejdz w zakładke &quot;Customized Statement&quot;
+2.Wpisz w pole  &quot;Account no&quot; numer konta.
+3.Wybierz date w jakim chcesz sprawdzis status.
+4.Wpisz wartość jaka chcesz sprawdzić w polu &quot;Minimum Transaction Value&quot;
+5.Wpisz numer transakcji w polu &quot;Number of Transaction&quot;.
+6.Nacisnij &amp;lt;Submit&amp;gt;.
+
+</steps>
+										<expected>Pojawia sie pusta strona.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C28</id>
+				<title>[Log out] Poprawne wylogowanie klienta  sie z  swoojego konta .</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Adres strony: https://demo.guru99.com/v4/customer/Customerhomepage.php
+Klient powinien być zalogowany.
+
+Środowisko :
+Windows 10 Home
+Google Chrome  Wersja 110 (64-bit)
+
+</preconds>
+										<steps>Wcisnij w zakładce pole &quot; Log out &quot;</steps>
+										<expected>Wyswietla sie komunikat :&quot;You Have Succesfully Logged Out!!&quot;</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+			</section>
+	</sections>
+</suite>
