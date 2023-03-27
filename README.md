@@ -4,7 +4,7 @@
 
 
 #### 1.  Testowałem na podstawie specyfikacji  Guru99 Bank Projekt i na samej aplikacji webowej.
-#### 2.  Do robienia screenshotów i filmiku użyłem narzędzia Screenpresso.
+#### 2.  Do robienia screenshotów i filmu użyłem narzędzia Screenpresso.
 #### 3.  Do stworzenia tymczasowego e-maila użyłem strony : https://temp-mail.org/pl/
 #### 4.  Co udało się zrobić :
  -Przypadki testowe w narzędziu TestRail
